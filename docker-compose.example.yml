@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  wordpress:
+    build: .
+    #image: ulsmith/alpine-apache-php7
+    volumes:
+      - ./www:/app/public
+      - ./logs:/var/log
+    environment:
+      APACHE_SERVER_NAME: yoursite
+      PHP_OUTPUT_BUFFERING: "Off"
+      PHP_LOG_ERRORS_MAX_LEN: 0
+      PHP_HTML_ERRORS: "Off"
+      PHP_ERROR_LOG: "php_errors.log"
+      PHP_DATE_TIMEZONE: "Europe/Budapest"
+      PHP_MAX_FILE_UPLOADS: "256M"
+      PHP_POST_MAX_SIZE: "256M"
+    ports:
+    - "8888:80"
