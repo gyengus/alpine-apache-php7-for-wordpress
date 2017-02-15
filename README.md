@@ -1,4 +1,4 @@
-# Alpine LAP Server for Wordpress page
+# Alpine LAP Server for WordPress page
 
 Based on [ulsmith/alpine-apache-php7](https://hub.docker.com/r/ulsmith/alpine-apache-php7/)
 
